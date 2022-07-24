@@ -1,0 +1,49 @@
+- navebar
+    - information
+        - about 
+        - projects
+        - skills
+        - resume
+        - contact
+    - qualitys
+        - sticks to top
+        - disapears on scroll down
+        - appears on scroll up
+        - when at top of page apperance fits background
+    -apperance
+        - when at top back ground is transparent
+        - background is light purple 
+        - tittle on left
+        - sction buttons lining up on right
+            - about 
+            - projects
+            - skills
+            - resume
+            - contact
+- bubble buttons
+    - location
+        - left side
+    - content
+        - github
+        - linked in
+        - email/contact
+    - apperance
+        - logo of entity
+        - on hover shows full name (maybe?)
+- content section
+    - about
+        - eduaction
+        - goals as software developer
+    - projcts
+        - orgonized by type, i.e. web dev, science, ai, ect
+        - one div each
+        - immages/video of project
+            - on left
+        - discrioption
+            - title
+            - tools used
+            - breif discrioption
+                - goal
+                - how it was accomplished
+        - links to repository and or url
+
