@@ -7,7 +7,9 @@ import About from "./componets/About.tsx";
 import Skills from "./componets/Skills.tsx";
 import Contact from "./componets/Contact.tsx";
 
-
+/**
+ * prtfoli to demonstart skill and experience of creator
+ */
 
 export default function Home() {
   return (

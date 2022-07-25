@@ -12,7 +12,15 @@ import { tw } from "twind";
  // TODO - set div background color (maybe darker purple )
  // TODO - set button color (maybe lighter purple)
  
- 
+ /**
+  * componet creates a div containing all relevent forms of contact pluse
+  * an easy way to use them. 
+  * Each contact form is dipicted as a button with the logo of said form.
+  * When the github button is clicked a new tabe is opend liking to github of creator,
+  * The same is done for linkedin.
+  * When email is pushed the email app is opend on the users pc/mac and propts the email
+  * 
+  */
 
 export default function Contact() {
     return (

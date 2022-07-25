@@ -8,6 +8,12 @@ import { tw } from "twind";
 // TODO - on hover over ellement scrolle out name (to the right of the image)
 // TODO - when ellement is hoverd over move other elements to the sid 
 
+/**
+ * componte is a list of skill the creator has relevent to programing, i.e.
+ * languages, and tools. These skills are desplayed as a list of logos that
+ * show the full name on hover (moving the other skills to the side). 
+ */
+
 export default function Skills() {
     return (
         <div>
