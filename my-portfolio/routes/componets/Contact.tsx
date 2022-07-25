@@ -2,6 +2,18 @@
 import { h } from "preact";
 import { tw } from "twind";
 
+
+ // TODO - add image for email
+ // TODO - add image for github
+ // TODO - add image for linkedIn
+ // TODO - make linkedin button open new linkedin tab
+ // TODO - make email button functional (have it display email with copy prompt and/or open email app on pc)
+ // TODO - set div size
+ // TODO - set div background color (maybe darker purple )
+ // TODO - set button color (maybe lighter purple)
+ 
+ 
+
 export default function Contact() {
     return (
         <div>
