@@ -4,5 +4,12 @@ export * from "twind";
 export const config: Configuration = {
   darkMode: "class",
   mode: "silent",
+  theme: {
+    extend: {
+      backgroundImage: {
+        'email': "url('/routes/email.png')",
+      }
+    }
+  },
 };
 if (IS_BROWSER) setup(config);

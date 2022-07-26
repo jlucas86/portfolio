@@ -24,16 +24,29 @@ import { tw } from "twind";
 
 export default function Contact() {
     return (
-        <div>
+        <div class={tw`bg-gray-900`}>
           <div class={tw`text-5xl `}>Contact:</div>
           <div class={tw`flex content-center justify-center`}>
-              <button class={tw`mx-5 px-5 bg-purple-300 rounded-md`}>email</button>
-              <button class={tw`mx-5 px-5 bg-purple-300 rounded-md`}>linked in</button>
-              <button 
-                class={tw`mx-5 px-5 bg-purple-300 rounded-md`} 
-                onclick="window.open('https://github.com/jlucas86')">
-                  github
-              </button>
+              <input 
+                type="image" 
+                src="/img/email.png" 
+                alt="email"
+                class={tw`w-1/2 max-w-xs p-8 m-10 bg-purple-500 rounded-lg`}
+              />
+              <input 
+                type="image" 
+                src="/img/github.png"
+                alt="github" 
+                onclick="window.open('https://github.com/jlucas86')"
+                class={tw`w-1/2 max-w-xs p-8 m-10 bg-purple-500 rounded-lg`}
+              />
+              <input 
+                type="image" 
+                src="/img/linkedin.png" 
+                alt="linkedIn"
+                class={tw`w-1/2 max-w-xs p-8 m-10 bg-purple-500 rounded-lg`}
+              />
+              
           </div>
         </div>
       );
