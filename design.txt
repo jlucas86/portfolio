@@ -33,7 +33,9 @@
 - content section
     - about
         - eduaction
+            - B.S. computer science UMBC Universiy of maryland, Baltimore county
         - goals as software developer
+        - how to acheive goals
     - projcts
         - orgonized by type, i.e. web dev, science, ai, ect
         - one div each
@@ -46,4 +48,55 @@
                 - goal
                 - how it was accomplished
         - links to repository and or url
+        - actual projects
+            - professional
+                - Raid clear calculator
+                    - tools: python, regEX
+                    - goal: calculate the total amount of time spent by all players playing each of Destiny2's raids on day one.
+                    - solution: scrape the html pages of the stats, provided by raidreport.com. Use regEX to get and format all of the 
+                        times, then put the times in a list. Finaly add all of the times together, using basic python calculations.
+                - motorcycle lighting system
+            - for fun/ amature
+                - FoodMap
+                - N-Body Simulation
+                - Income Predictor
+                - Connect 4 AI
+                - Windows Hacker Board
+            - school
+                - Morse Code Translator
+                - pokiemon browser game
+                - calculations
+                    - rocket
+                    - integral
+                    - sound waves
 
+    - skills
+        - languages, framworks, and librares
+            - java script
+                - type script
+                - react
+                - fresh
+                - node js
+                - deno
+            - HTML
+            - CSS
+                - tailwind
+                - bootstrap
+            - c/c++
+            - java
+                - springboot
+            - python
+                - django
+                - jupeter notebook
+                - numpy
+                - scikit-learn
+                - pandas
+            - mysql/MarieDB
+            - postgreSQL
+            - bash
+        - tools 
+            - linux
+            - github
+            - regEX
+            - docker
+            - virtual box
