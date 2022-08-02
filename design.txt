@@ -56,12 +56,42 @@
                     - solution: scrape the html pages of the stats, provided by raidreport.com. Use regEX to get and format all of the 
                         times, then put the times in a list. Finaly add all of the times together, using basic python calculations.
                 - motorcycle lighting system
+                    - tools: micro python
+                    - hardware: raspberry pi pico
+                    - goal: make a universal LED under glow system for a motorcycle
+                    - solustion: use LED strips along with a raspbery py  pico to produece the lighting. The raspberry py sets the colors
+                        based on the position in an list and a button click
             - for fun/ amature
                 - FoodMap
+                    - tools: java, spring boot, java script, html, css, react, postgreSQL, docker
+                    - goal: make a webapp that functionaly replaces yelp. This webapp will take the users location then load load a map with
+                        recomended restaurants in a set radious. The user can also select to see restaurants revewed by other users, groups,
+                        and restaurants they revewed. These restaurants will be dispalayed in a list from and on an interactive map.
+                    - solution: use springboot and postgreSQL to make a back end, to handle all user requests. Then make a fruntend using 
+                        react, of wich the home page will be the restaurants that are best reviewed in the vasinity.
                 - N-Body Simulation
+                    - tools: c
+                    - goal: make a n-bodys Simulation that solves for user input.
+                    - solution: use the barnes-hut algorithm to make a multythreaded n-bodys Simulation.
                 - Income Predictor
+                    - tools: python, scikit learn, pandas
+                    - goal: train multiple AI with difrent algorithms to solve priedic a persons income from census data. then analice each 
+                        algorithm for potential biases and preformance. 
+                    - solution: use pandas to organice the data from the census. Then train and evalueta the accuracy of support vector machines,
+                        random forest, logistic regression, and nearest neighbors classification algorithms. Next remove columns from data 
+                        and evalueta the accuracy for each algorithm. finaly cheak common biases, such as sex, race, and nationality.
                 - Connect 4 AI
+                    - tools: python
+                    - goal: creat an ai that can compeat in connect 4.
+                    - solution: use pyton to creat a connect 4 with a command line interface. Then use the minimax algorithm to make an ai that
+                        to play. Next train the heuriatic with the genteic algorithm, by having 2 AI play each other one with a set huristioc and 
+                        the other with the one constantly changing.
                 - Windows Hacker Board
+                    - tools: micro python
+                    - hardware: raspberry py pico
+                    - goal: download folders onto attacked computer when raspberry pi is pluged in.
+                    - solution: use a raspberry py pico to function as a mouse and keyboard. When pluged in the py will open settings snd dissable 
+                        windows defender. then open command prompt and downlaod a file and run it. 
             - school
                 - Morse Code Translator
                 - pokiemon browser game
@@ -91,6 +121,7 @@
                 - numpy
                 - scikit-learn
                 - pandas
+                - micro python
             - mysql/MarieDB
             - postgreSQL
             - bash
