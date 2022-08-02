@@ -23,38 +23,23 @@ export default function Skills(props: skillProps) {
   const [name, setName] = useState("");
   return (
         <div class={tw` bg-purple-300`}>
-          <div class={tw`text-5xl `}>skills:</div>
+          <div class={tw`text-5xl flex`}>
+            <div>skills:</div>
+            <div>{name}</div>
+          </div>
+          
           <div class={tw`grid grid-cols-6 gap-4`}>
             {props.skills.map(skill => (
               <img
                 id ={skill[0]} 
                 src={skill[1]} 
-                height="100px"
+                height="100"
+                width="100"
                 alt={skill[0]} 
+                onmouseover= {()=> setName(skill[0])}
+                onmouseout= {()=> setName("")}
               />
             ))}
-                <img
-                id
-                src="/logo.svg"
-                height="100px"
-                alt="the fresh logo"
-              />
-              <div class={tw`p-5`}> test med </div>
-              <div class={tw`p-5`}> test meadf </div>
-              <div class={tw`p-5`}> test me </div>
-              <div class={tw`p-5`}> test meadfss </div>
-              <div class={tw`p-5`}> test mess </div>
-              <div class={tw`p-5`}> test me </div>
-              <div class={tw`p-5`}> test meadfasdfasdf </div>
-              <div class={tw`p-5`}> test me </div>
-              <div class={tw`p-5`}> test meadf </div>
-              <div class={tw`p-5`}> test me </div>
-              <div class={tw`p-5`}> test measdfasdfasdf </div>
-              <div class={tw`p-5`}> test medfasd </div>
-              <div class={tw`p-5`}> test me </div>
-              <div class={tw`p-5`}> test measdf </div>
-              <div class={tw`p-5`}> test measdfdsf </div>
-              <div class={tw`p-5`}> test mesadf </div>
           </div>
 
         </div>

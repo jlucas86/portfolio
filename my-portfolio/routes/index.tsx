@@ -24,7 +24,7 @@ export default function Home() {
   let react: [string, string] = ["React","/img/react.png"];
   let nodejs: [string, string] = ["Node.js","/img/nodejs.png"];
   let mysql: [string, string] = ["mySQL","/img/mysql.svg"];
-  let postgrsql: [string, string] = ["PostgrSQL","/img/postgrsql.png"];
+  let postgresql: [string, string] = ["PostgreSQL","/img/postgresql.png"];
   let bootstrap: [string, string] = ["Boot Strap","/img/bootstrap.png"];
   let jupyterNoteBook: [string, string] = ["Jupyter Note Book","/img/jupyterNoteBook.png"];
   let python: [string, string] = ["Python","/img/python.png"];
@@ -37,7 +37,7 @@ export default function Home() {
   
 
   let skillList: Array<[string, string]> = [fresh, c, cpp, java, javaScript, html5, css3, react, nodejs, mysql,
-    postgrsql, bootstrap, jupyterNoteBook, python, github, virtualBox, django, docker];
+    postgresql, bootstrap, jupyterNoteBook, python, github, virtualBox, django, docker];
   return (
     <div class={tw`font-mono`}>
       <NavBar/>
