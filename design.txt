@@ -87,7 +87,7 @@
                 - springboot
             - python
                 - django
-                - jupeter notebook
+                - jupyter notebook
                 - numpy
                 - scikit-learn
                 - pandas
