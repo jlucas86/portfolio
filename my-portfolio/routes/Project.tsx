@@ -9,7 +9,8 @@ interface projectProps{
     goal: string,
     solution: string,
     github: string,
-    immage: string,
+    image: string,
+    imageAlt: string,
 }
 
 // TODO - display image/embeded video on left of div
@@ -24,25 +25,42 @@ interface projectProps{
 export default function Project(props: projectProps) {
     return (
         <div>
-          <div class={tw`text-5xl`}>{props.title}</div>
+          
           <div class={tw` flex`}>
-            <div class={tw`font-bold`}>Tools:</div>
-            <div class={tw``}>{props.tools}</div>
+              <div>
+                <img
+                    id ={props.imageAlt} 
+                    src={props.image} 
+                    height="100"
+                    width="300"
+                    alt={props.imageAlt}
+                    class={tw`h-52`}
+                />
+              </div>
+            <div>
+                <div  class={tw`text-5xl`}>{props.title}</div>
+                    <div class={tw` flex`}>
+                        <div class={tw`font-bold`}>Tools:</div>
+                        <div class={tw``}>{props.tools}</div>
+                    </div>
+                    {props.hardware != null &&
+                        <div class={tw` flex`}>
+                            <div class={tw`font-bold`}>Hardware:</div>
+                            <div class={tw``}>{props.hardware}</div>
+                        </div>
+                    }
+                    <div class={tw` flex`}>
+                        <div class={tw`font-bold`}>Goal:</div>
+                        <div class={tw``}>{props.goal}</div>
+                    </div>
+                    <div class={tw` flex`}>
+                        <div class={tw`font-bold`}>Solution:</div>
+                        <div class={tw``}>{props.solution}</div>
+                    </div>
+                </div>
+            
           </div>
-          {props.hardware != null &&
-            <div class={tw` flex`}>
-                <div class={tw`font-bold`}>Hardware:</div>
-                <div class={tw``}>{props.tools}</div>
-            </div>
-          }
-          <div class={tw` flex`}>
-            <div class={tw`font-bold`}>Goal:</div>
-            <div class={tw``}>{props.goal}</div>
-          </div>
-          <div class={tw` flex`}>
-            <div class={tw`font-bold`}>Solution:</div>
-            <div class={tw``}>{props.solution}</div>
-          </div>
+          
         </div>
       );
   }

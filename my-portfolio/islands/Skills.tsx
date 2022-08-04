@@ -1,7 +1,7 @@
 /** @jsx h */
 import { h } from "preact";
 import { tw } from "twind";
-import { useState } from "preact/hooks";
+import { useState, useEffect } from "preact/hooks";
 
 // TODO - make list of skills
 // TODO - get immages for skills
@@ -21,6 +21,7 @@ interface skillProps {
 
 export default function Skills(props: skillProps) {
   const [name, setName] = useState("");
+
   return (
         <div class={tw` bg-purple-300`}>
           <div class={tw`text-5xl flex`}>

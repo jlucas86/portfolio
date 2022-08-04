@@ -6,7 +6,7 @@ import Project from "./Project.tsx";
 import About from "./componets/About.tsx";
 import Skills from "../islands/Skills.tsx";
 import Contact from "./componets/Contact.tsx";
-import NavBar from "./componets/NavBar.tsx";
+import NavBar from "../islands/NavBar.tsx";
 
 /**
  * prtfoli to demonstart skill and experience of creator
@@ -33,32 +33,39 @@ export default function Home() {
   let django: [string, string] = ["Django","/img/django.png"];
   let docker: [string, string] = ["Docker","/img/docker.png"];
 
-  let foodMap: [string,string,string,string,string,string,string] = ["Food Map", "tools", "hardware", "goal", "solution", "github", "image"]
+  let foodMap: [string, string, string, string, string, string, string, string] = ["Food Map", "tools", "hardware", "goal",
+    "solution", "github", "https://picsum.photos/200/300","random image"]
 
-
-  
+  let projects: Array<[string, string, string, string, string, string, string, string]> = [foodMap]
 
   let skillList: Array<[string, string]> = [fresh, c, cpp, java, javaScript, html5, css3, react, nodejs, mysql,
     postgresql, bootstrap, jupyterNoteBook, python, github, virtualBox, django, docker];
+
+  let screenPos: number = 0;
+
+
+
   return (
-    <div class={tw`font-mono`}>
+    <div class={tw`font-mono `} onscroll="console.log('butts')" >
       <NavBar/>
     
-      <div class={tw`p-10  mx-auto max-w-screen-md`}>
-        <img
-          src="/logo.svg"
-          height="100px"
-          alt="the fresh logo: a sliced lemon dripping with juice"
-        />
-        <p class={tw`my-6 bg-purple-400`}>
-          dont tell me what to do!!!!!!
-          
-        </p>
-        <Counter start={5} />
-
+      <div id={"test"} class={tw`mx-auto max-w-screen-xlg`}>
+        
         <About/>
-        <Project/>
         <Skills skills={skillList}/>
+        
+        {projects.map(project => (
+              <Project 
+                title={project[0]}
+                tools={project[1]}
+                hardware={project[2]}
+                goal={project[3]}
+                solution={project[4]}
+                github={project[5]}
+                image={project[6]}
+                imageAlt={project[7]}
+              />
+            ))}
         <Contact/>
         
         

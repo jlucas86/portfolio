@@ -7,10 +7,10 @@ import * as $1 from "./routes/[name].tsx";
 import * as $2 from "./routes/api/joke.ts";
 import * as $3 from "./routes/componets/About.tsx";
 import * as $4 from "./routes/componets/Contact.tsx";
-import * as $5 from "./routes/componets/NavBar.tsx";
-import * as $6 from "./routes/index.tsx";
+import * as $5 from "./routes/index.tsx";
 import * as $$0 from "./islands/Counter.tsx";
-import * as $$1 from "./islands/Skills.tsx";
+import * as $$1 from "./islands/NavBar.tsx";
+import * as $$2 from "./islands/Skills.tsx";
 
 const manifest = {
   routes: {
@@ -19,12 +19,12 @@ const manifest = {
     "./routes/api/joke.ts": $2,
     "./routes/componets/About.tsx": $3,
     "./routes/componets/Contact.tsx": $4,
-    "./routes/componets/NavBar.tsx": $5,
-    "./routes/index.tsx": $6,
+    "./routes/index.tsx": $5,
   },
   islands: {
     "./islands/Counter.tsx": $$0,
-    "./islands/Skills.tsx": $$1,
+    "./islands/NavBar.tsx": $$1,
+    "./islands/Skills.tsx": $$2,
   },
   baseUrl: import.meta.url,
 };

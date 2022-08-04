@@ -32,6 +32,7 @@ export default function Contact() {
                 src="/img/email.png" 
                 alt="email"
                 class={tw`w-1/2 max-w-xs p-8 m-10 bg-purple-500 rounded-lg`}
+                onclick="console.log(window.pageYOffset)"
               />
               <input 
                 type="image" 
