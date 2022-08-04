@@ -33,6 +33,8 @@ export default function Home() {
   let django: [string, string] = ["Django","/img/django.png"];
   let docker: [string, string] = ["Docker","/img/docker.png"];
 
+  let foodMap: [string,string,string,string,string,string,string] = ["Food Map", "tools", "hardware", "goal", "solution", "github", "image"]
+
 
   
 
