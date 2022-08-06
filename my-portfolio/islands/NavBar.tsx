@@ -11,20 +11,33 @@ import { useState, useEffect } from "preact/hooks";
 export default function NavBar() {
 
     const [display, setDisplay] = useState(tw` fixed flow-root bg-purple-400 h-20 w-screen`);
-    const [yPosition, setyPostion] = useState(0);
+    const [yPosition, setyPostion] = useState(window.scrollY );
+    const [animte, setAnimte] = useState(false)
 
     const navBarControl = () =>{
+        //console.log(window.scrollY )
+        console.log(yPosition)
         
-        if(window.scrollY > yPosition)
+        if(window.scrollY > yPosition){
             setDisplay(tw`hide`)
-        else
-            setDisplay(tw` fixed flow-root bg-purple-400 h-20 w-screen duration-300 scale-y-10`)
+            setAnimte(true)
+        } else if (window.scrollY < yPosition){
+            if(animte === true){
+                setDisplay(tw` fixed flow-root bg-purple-400 h-20 w-screen duration-300 scale-y-10`)
+                setAnimte(false)
+            }
+            else{
+                setDisplay(tw` fixed flow-root bg-purple-400 h-10 w-screen`)
+            }
+                
+        }
+            
         setyPostion(window.scrollY)
     }
 
-    useEffect(() =>{
+    useEffect(() => {
         window.addEventListener('scroll', () => navBarControl())
-      })
+      }, [])
     return (
             <div class={display}>
                 <div class={tw`float-left mx-20`}>Joshua Lucas</div>

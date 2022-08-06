@@ -36,7 +36,7 @@ export default function Home() {
   let foodMap: [string, string, string, string, string, string, string, string] = ["Food Map", "tools", "hardware", "goal",
     "solution", "github", "https://picsum.photos/200/300","random image"]
 
-  let projects: Array<[string, string, string, string, string, string, string, string]> = [foodMap]
+  let projects: Array<[string, string, string, string, string, string, string, string]> = [foodMap, foodMap, foodMap, foodMap, foodMap, foodMap, foodMap, foodMap, foodMap, foodMap, foodMap, foodMap, foodMap]
 
   let skillList: Array<[string, string]> = [fresh, c, cpp, java, javaScript, html5, css3, react, nodejs, mysql,
     postgresql, bootstrap, jupyterNoteBook, python, github, virtualBox, django, docker];
@@ -49,7 +49,7 @@ export default function Home() {
     <div class={tw`font-mono `} onscroll="console.log('butts')" >
       <NavBar/>
     
-      <div id={"test"} class={tw`mx-auto max-w-screen-xlg`}>
+      <div id={"test"} class={tw`mx-auto max-w-screen-3xlg`}>
         
         <About/>
         <Skills skills={skillList}/>
