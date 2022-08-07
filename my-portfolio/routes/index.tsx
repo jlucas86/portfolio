@@ -2,7 +2,7 @@
 import { h } from "preact";
 import { tw } from "twind";
 import Counter from "../islands/Counter.tsx";
-import Project from "./Project.tsx";
+import Project from "./componets/Project.tsx";
 import About from "./componets/About.tsx";
 import Skills from "../islands/Skills.tsx";
 import Contact from "./componets/Contact.tsx";
