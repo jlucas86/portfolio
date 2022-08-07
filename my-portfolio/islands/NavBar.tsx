@@ -14,22 +14,23 @@ import { useState, useEffect, useReducer} from "preact/hooks";
  */
 export default function NavBar() {
 
-    const [display, setDisplay] = useState(tw` fixed flow-root bg-purple-400 h-20 w-screen`);
+    const [display, setDisplay] = useState(tw` fixed flow-root bg-purple-400 h-14 w-screen`);
 
     const mouseOn = (()=>{
-        setDisplay(tw` fixed flow-root bg-purple-400 h-20 w-screen duration-300 scale-y-10`)
+        setDisplay(tw` fixed flow-root bg-purple-400 h-14 w-screen duration-300 scale-y-10`)
     }) 
 
     const mouseOut = (()=>{
+    
         navBarControl()
     })
 
     const navBarControl = (() =>{
         
         if(window.scrollY === 0){
-            setDisplay(tw` fixed flow-root bg-purple-400 h-20 w-screen duration-300 scale-y-10`)
+            setDisplay(tw` fixed flow-root bg-purple-400 h-14 w-screen duration-300 scale-y-10`)
         }else{
-            setDisplay(tw` fixed flow-root bg-purple-400 h-100 w-screen bg-opacity-10`)
+            setDisplay(tw` fixed flow-root bg-purple-400 h-14 w-screen bg-opacity-100 ttransition-opacity duration-300 ease-out bg-opacity-10`)
         }
 
         /*if(Math.abs(window.scrollY - previousY) === 102){
@@ -70,14 +71,15 @@ export default function NavBar() {
         }
       }, [window.scrollY])
     return (
-            <div class={display} onmouseover={()=> mouseOn()} onmouseout={()=> mouseOut()}>
+            <div class={display} onmouseover={()=> mouseOn()} onmouseleave={()=> mouseOut()}>
                 <div class={tw`float-left mx-20`}>Joshua Lucas</div>
                 <div class={tw` flex float-right mx-20`}>
-                    <div class={tw`px-1`}>about </div>
-                    <div class={tw`px-1`}>projects </div>
-                    <div class={tw`px-1`}>skills </div>
-                    <div class={tw`px-1`}>resume </div>
-                    <div class={tw`px-1`}>contact </div>
+                    <div class={tw`px-1 cursor-pointer`}>about </div>
+                    <div class={tw`px-1 cursor-pointer`}>projects </div>
+                    <div class={tw`px-1 cursor-pointer`}>skills </div>
+                    <div class={tw`px-1 cursor-pointer`}>contact </div>
+                    <div class={tw`px-1 cursor-pointer`} onClick="window.open('/generalResume.pdf')">resume </div>
+                    <div class={tw`px-1 cursor-pointer`} onClick="window.open('https://github.com/jlucas86')">github </div>
                 </div>
             </div>
       );
