@@ -20,16 +20,7 @@
             - skills
             - resume
             - contact
-- bubble buttons
-    - location
-        - left side
-    - content
-        - github
-        - linked in
-        - email/contact
-    - apperance
-        - logo of entity
-        - on hover shows full name (maybe?)
+)
 - content section
     - about
         - eduaction

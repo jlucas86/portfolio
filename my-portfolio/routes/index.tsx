@@ -66,7 +66,7 @@ export default function Home() {
                 imageAlt={project[7]}
               />
             ))}
-        <Contact/>
+        <Contact id="contact"/>
         
         
       </div>

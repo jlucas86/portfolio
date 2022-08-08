@@ -12,8 +12,15 @@ import { tw } from "twind";
 
 export default function About() {
     return (
-        <div>
-          about me
+        <div class={tw`bg-gray-900 text-white pt-14`}>
+            <h1>Joshua Lucas</h1>
+            <p> 
+                I am a software deveoper with a B.S in computer science from UMBC. My goals as a software developer are to produce
+                high quality software to solve modernday problems from large to small. One such problem is the ability to find good 
+                quality food where ever you go. I am curently working on this problem by developing a webapp to allow friend, restuarants, 
+                and reveiwers/influencers to communicat, post reviews, and vote on the helpfullness of reveiws. 
+                
+            </p>
         </div>
       );
   }

@@ -70,6 +70,9 @@ export default function NavBar() {
             window.removeEventListener('scroll', navBarControl)
         }
       }, [window.scrollY])
+
+      
+
     return (
             <div class={display} onmouseover={()=> mouseOn()} onmouseleave={()=> mouseOut()}>
                 <div class={tw`float-left mx-20`}>Joshua Lucas</div>
@@ -77,7 +80,7 @@ export default function NavBar() {
                     <div class={tw`px-1 cursor-pointer`}>about </div>
                     <div class={tw`px-1 cursor-pointer`}>projects </div>
                     <div class={tw`px-1 cursor-pointer`}>skills </div>
-                    <div class={tw`px-1 cursor-pointer`}>contact </div>
+                    <div class={tw`px-1 cursor-pointer`} onClick="document.getElementById('contact').scrollIntoView()" >contact </div>
                     <div class={tw`px-1 cursor-pointer`} onClick="window.open('/generalResume.pdf')">resume </div>
                     <div class={tw`px-1 cursor-pointer`} onClick="window.open('https://github.com/jlucas86')">github </div>
                 </div>
