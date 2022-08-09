@@ -1,13 +1,11 @@
 /** @jsx h */
 import { h } from "preact";
 import { tw } from "twind";
-import Counter from "../islands/Counter.tsx";
-import Project from "./componets/Project.tsx";
-import About from "./componets/About.tsx";
-import Skills from "../islands/Skills.tsx";
-import Contact from "../islands/Contact.tsx";
-import NavBar from "../islands/NavBar.tsx";
-import Index2 from "../islands/index2.tsx";
+import Project from "../routes/componets/Project.tsx";
+import About from "../routes/componets/About.tsx";
+import Skills from "./Skills.tsx";
+import Contact from "./Contact.tsx";
+import NavBar from "./NavBar.tsx";
 import { useState, useEffect, useRef} from "preact/hooks";
 
 /**
@@ -15,14 +13,8 @@ import { useState, useEffect, useRef} from "preact/hooks";
  */
 
 export default function Home() {
-  return (<div>
-    <Index2>
-      
-    </Index2>
-  </div>);
-}
 
-  /*let fresh: [string, string] = ["Fresh","/logo.svg"];
+  let fresh: [string, string] = ["Fresh","/logo.svg"];
   let c: [string, string] = ["C","/img/c.png"];
   let cpp: [string, string] = ["C++","/img/c++.png"];
   let java: [string, string] = ["Java","/img/java.png"];
@@ -51,11 +43,17 @@ export default function Home() {
 
   let screenPos: number = 0;
 
+  const aboutRef = useRef(null);
+  const skillsRef = useRef(null);
+  const projectsRef = useRef(null);
   const contactRef = useRef(null);
 
     useEffect(() => {
+      console.log(aboutRef.current);
+      console.log(skillsRef.current);
+      console.log(projectsRef.current);
       console.log(contactRef.current);
-    }, [contactRef]);
+    }, [aboutRef, skillsRef, projectsRef, contactRef]);
 
     const handleScroll = (ref) => {
       console.log(ref)
@@ -70,30 +68,31 @@ export default function Home() {
   return (
     <div class={tw`font-mono `} onscroll="console.log('butts')" >
       <div class={tw`px-1 cursor-pointer`} onClick={() =>handleScroll(contactRef)} >contact </div>
-      <NavBar contactRef={contactRef}/>
+      <NavBar aboutRef={aboutRef} skillsRef={skillsRef} projectsRef={projectsRef} contactRef={contactRef}/>
     
       <div id={"test"} class={tw`mx-auto max-w-screen-3xlg`}>
         
-        <About/>
+        <About ref={aboutRef}/>
         
-        <Skills skills={skillList}/>
-        
-        {projects.map(project => (
-              <Project 
-                title={project[0]}
-                tools={project[1]}
-                hardware={project[2]}
-                goal={project[3]}
-                solution={project[4]}
-                github={project[5]}
-                image={project[6]}
-                imageAlt={project[7]}
-              />
-            ))}
+        <Skills skills={skillList} ref={skillsRef}/>
+        <div ref={projectsRef}>
+          {projects.map(project => (
+                <Project 
+                  title={project[0]}
+                  tools={project[1]}
+                  hardware={project[2]}
+                  goal={project[3]}
+                  solution={project[4]}
+                  github={project[5]}
+                  image={project[6]}
+                  imageAlt={project[7]}
+                />
+              ))}
+          </div>
         <Contact id="contact" contactRef={contactRef} ref={contactRef} />
         
         
       </div>
     </div>
   );
-}*/
+}

@@ -22,7 +22,8 @@ import { tw } from "twind";
   * 
   */
 
-export default function Contact() {
+export default function Contact({contactRef}) {
+
     return (
         <div class={tw`bg-gray-900`}>
           <div class={tw`text-5xl `}>Contact:</div>

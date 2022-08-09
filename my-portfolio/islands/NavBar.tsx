@@ -12,7 +12,7 @@ import { useState, useEffect, useReducer} from "preact/hooks";
  * the page or hovers the mouse over it, the back gound will be solid. other wise the background will 
  * be translucen.
  */
-export default function NavBar() {
+export default function NavBar({aboutRef, skillsRef, projectsRef, contactRef}) {
 
     const [display, setDisplay] = useState(tw` fixed flow-root bg-purple-400 h-14 w-screen`);
 
@@ -71,16 +71,23 @@ export default function NavBar() {
         }
       }, [window.scrollY])
 
-      
+      const handleScroll = (ref) => {
+        console.log(ref.current.base.offsetTop)
+        window.scrollTo({
+          top: ref.current.base.offsetTop,
+          left: 0,
+          behavior: "smooth",
+        });
+      };
 
     return (
             <div class={display} onmouseover={()=> mouseOn()} onmouseleave={()=> mouseOut()}>
                 <div class={tw`float-left mx-20`}>Joshua Lucas</div>
                 <div class={tw` flex float-right mx-20`}>
-                    <div class={tw`px-1 cursor-pointer`}>about </div>
-                    <div class={tw`px-1 cursor-pointer`}>projects </div>
-                    <div class={tw`px-1 cursor-pointer`}>skills </div>
-                    <div class={tw`px-1 cursor-pointer`} onClick="document.getElementById('contact').scrollIntoView()" >contact </div>
+                    <div class={tw`px-1 cursor-pointer`} onClick={() =>handleScroll(aboutRef)}> About </div>
+                    <div class={tw`px-1 cursor-pointer`} onClick={() =>handleScroll(skillsRef)}> Skills </div>
+                    <div class={tw`px-1 cursor-pointer`} onClick={() =>handleScroll(projectsRef)}> Projects </div>
+                    <div class={tw`px-1 cursor-pointer`} onClick={() =>handleScroll(contactRef)}> Contact </div>
                     <div class={tw`px-1 cursor-pointer`} onClick="window.open('/generalResume.pdf')">resume </div>
                     <div class={tw`px-1 cursor-pointer`} onClick="window.open('https://github.com/jlucas86')">github </div>
                 </div>
