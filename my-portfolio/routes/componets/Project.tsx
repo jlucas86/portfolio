@@ -24,7 +24,7 @@ interface projectProps{
 
 export default function Project(props: projectProps) {
     return (
-        <div>
+        <div class={tw`px-10 bg-purple-400 py-4 flex justify-center`}>
           
           <div class={tw` flex`}>
               <div>

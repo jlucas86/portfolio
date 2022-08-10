@@ -67,14 +67,13 @@ export default function Home() {
 
   return (
     <div class={tw`font-mono `} onscroll="console.log('butts')" >
-      <div class={tw`px-1 cursor-pointer`} onClick={() =>handleScroll(contactRef)} >contact </div>
       <NavBar aboutRef={aboutRef} skillsRef={skillsRef} projectsRef={projectsRef} contactRef={contactRef}/>
     
-      <div id={"test"} class={tw`mx-auto max-w-screen-3xlg`}>
+      <div class={tw`mx-auto max-w-screen-2xlg`}>
         
         <About ref={aboutRef}/>
         
-        <Skills skills={skillList} ref={skillsRef}/>
+        <Skills skills={skillList} ref={skillsRef} />
         <div ref={projectsRef}>
           {projects.map(project => (
                 <Project 
