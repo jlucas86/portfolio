@@ -28,20 +28,24 @@ export default function Home() {
   let bootstrap: [string, string] = ["Boot Strap","/img/bootstrap.png"];
   let jupyterNoteBook: [string, string] = ["Jupyter Note Book","/img/jupyterNoteBook.png"];
   let python: [string, string] = ["Python","/img/python.png"];
-  let github: [string, string] = ["Github","/img/github.png"];
+  let git: [string, string] = ["Git","/img/git.png"];
   let virtualBox: [string, string] = ["Virtual Box","/img/virtualBox.png"];
   let django: [string, string] = ["Django","/img/django.png"];
   let docker: [string, string] = ["Docker","/img/docker.png"];
+  let spring: [string, string] = ["Spring Boot","/img/springBootLogo.png"];
+  let typeScript: [string, string] = ["Type Script","/img/typeScript.png"];
+  let deno: [string, string] = ["Deno","/img/deno.png"];
+  let bash: [string, string] = ["Bash","/img/bash.png"];
+  let linux: [string, string] = ["Linux","/img/linux.png"];
+  let tailwind: [string, string] = ["Tailwind","/img/tailwind.png"];
 
   let foodMap: [string, string, string, string, string, string, string, string] = ["Food Map", "tools", "hardware", "goal",
     "solution", "github", "https://picsum.photos/200/300","random image"]
 
   let projects: Array<[string, string, string, string, string, string, string, string]> = [foodMap, foodMap, foodMap, foodMap, foodMap, foodMap, foodMap, foodMap, foodMap, foodMap, foodMap, foodMap, foodMap]
 
-  let skillList: Array<[string, string]> = [fresh, c, cpp, java, javaScript, html5, css3, react, nodejs, mysql,
-    postgresql, bootstrap, jupyterNoteBook, python, github, virtualBox, django, docker];
-
-  let screenPos: number = 0;
+  let skillList: Array<[string, string]> = [html5, css3, tailwind, javaScript, typeScript, react, fresh, bootstrap, nodejs, deno, c, cpp, java, spring, 
+    python, jupyterNoteBook, django, mysql, postgresql, linux, git, virtualBox, docker, bash];
 
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
@@ -54,15 +58,6 @@ export default function Home() {
       console.log(projectsRef.current);
       console.log(contactRef.current);
     }, [aboutRef, skillsRef, projectsRef, contactRef]);
-
-    const handleScroll = (ref) => {
-      console.log(ref)
-      window.scrollTo({
-        top: ref.offsetTop,
-        left: 0,
-        behavior: "smooth",
-      });
-    };
 
 
   return (

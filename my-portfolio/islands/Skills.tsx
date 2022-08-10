@@ -23,8 +23,8 @@ export default function Skills(props: skillProps) {
   const [name, setName] = useState("");
 
   return (
-        <div class={tw` bg-gray-600 px-10`}>
-          <div class={tw`text-5xl flex`}>
+        <div class={tw` bg-gray-600 p-[5vw] h-screen`}>
+          <div class={tw`text-5xl flex pb-10`}>
             <div>skills:</div>
             <div>{name}</div>
           </div>

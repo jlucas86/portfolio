@@ -26,7 +26,7 @@ export default function Contact({contactRef}) {
 
     return (
         <div class={tw`bg-gray-600 px-10`}>
-          <div class={tw`text-5xl `}>Contact:</div>
+          <div class={tw`text-5xl `}>Contact Me:</div>
           <div class={tw`flex content-center justify-center`}>
               <input 
                 type="image" 
