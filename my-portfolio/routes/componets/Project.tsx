@@ -24,7 +24,7 @@ interface projectProps{
 
 export default function Project(props: projectProps) {
     return (
-        <div class={tw`px-10 bg-purple-400 py-4 flex justify-center hover:shadow-2xl hover:bg-purple-300 hover:scale-110 duration-300`}>
+        <div class={tw`flex px-10 py-4 mx-80 rounded-lg justify-center hover:shadow-2xl hover:bg-hover hover:scale-110 duration-300`}>
           
           <div class={tw` flex`}>
               <div>
@@ -38,8 +38,8 @@ export default function Project(props: projectProps) {
                 />
               </div>
             <div>
-                <div  class={tw`text-5xl`}>{props.title}</div>
-                    <div class={tw` flex`}>
+                <div  class={tw`text-5xl text-textS`}>{props.title}</div>
+                    <div class={tw` flex text-textP`}>
                         <div class={tw`font-bold`}>Tools:</div>
                         <div class={tw``}>{props.tools}</div>
                     </div>

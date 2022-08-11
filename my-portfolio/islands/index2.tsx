@@ -69,7 +69,7 @@ export default function Home() {
         <About ref={aboutRef}/>
         
         <Skills skills={skillList} ref={skillsRef} />
-        <div ref={projectsRef}>
+        <div ref={projectsRef} class={tw`bg-secondary`}>
           {projects.map(project => (
                 <Project 
                   title={project[0]}
