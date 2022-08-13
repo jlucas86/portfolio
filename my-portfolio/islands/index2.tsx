@@ -40,7 +40,7 @@ export default function Home() {
   let tailwind: [string, string] = ["Tailwind","/img/tailwind.png"];
 
   let foodMap: [string, string, string, string, string, string, string, string] = ["Food Map", "tools", "hardware", "goal",
-    "solution", "github", "https://picsum.photos/200/300","random image"]
+    "solution", "github", "https://picsum.photos/500/500","random image"]
 
   let projects: Array<[string, string, string, string, string, string, string, string]> = [foodMap, foodMap, foodMap, foodMap, foodMap, foodMap, foodMap, foodMap, foodMap, foodMap, foodMap, foodMap, foodMap]
 

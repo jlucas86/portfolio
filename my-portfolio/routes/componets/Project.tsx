@@ -24,36 +24,36 @@ interface projectProps{
 
 export default function Project(props: projectProps) {
     return (
-        <div class={tw`flex px-10 py-4 mx-80 rounded-lg justify-center hover:shadow-2xl hover:bg-hover hover:scale-110 duration-300`}>
+        <div class={tw`flex px-10 py-4 mx-96 rounded-lg justify-center hover:shadow-2xl hover:bg-hover hover:scale-110 duration-300`}>
           
           <div class={tw` flex`}>
               <div>
                 <img
                     id ={props.imageAlt} 
                     src={props.image} 
-                    height="100"
-                    width="300"
+                    height="500"
+                    width="500"
                     alt={props.imageAlt}
-                    class={tw`h-52`}
+                    class={tw`h-80`}
                 />
               </div>
-            <div>
+            <div class={tw` mx-14`}>
                 <div  class={tw`text-5xl text-textS`}>{props.title}</div>
-                    <div class={tw` flex text-textP`}>
+                    <div class={tw` flex text-textP `}>
                         <div class={tw`font-bold`}>Tools:</div>
                         <div class={tw``}>{props.tools}</div>
                     </div>
                     {props.hardware != null &&
-                        <div class={tw` flex`}>
+                        <div class={tw` flex text-textP`}>
                             <div class={tw`font-bold`}>Hardware:</div>
                             <div class={tw``}>{props.hardware}</div>
                         </div>
                     }
-                    <div class={tw` flex`}>
+                    <div class={tw` flex text-textP`}>
                         <div class={tw`font-bold`}>Goal:</div>
                         <div class={tw``}>{props.goal}</div>
                     </div>
-                    <div class={tw` flex`}>
+                    <div class={tw` flex text-textP`}>
                         <div class={tw`font-bold`}>Solution:</div>
                         <div class={tw``}>{props.solution}</div>
                     </div>
