@@ -69,7 +69,7 @@ export default function Home() {
         <About ref={aboutRef}/>
         
         <Skills skills={skillList} ref={skillsRef} />
-        <div ref={projectsRef} class={tw`bg-secondary h-screen overflow-y-scroll no-scrollbar`} style={"scrollbar-width: none; "}>
+        <div ref={projectsRef} class={tw`bg-secondary h-screen overflow-y-scroll py-10`} style={""}>
           {projects.map(project => (
                 <Project 
                   title={project[0]}

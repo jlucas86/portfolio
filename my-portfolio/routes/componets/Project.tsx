@@ -23,8 +23,10 @@ interface projectProps{
  */
 
 export default function Project(props: projectProps) {
+
+
     return (
-        <div class={tw`flex px-10 py-4 mx-96 rounded-lg justify-center hover:shadow-2xl hover:bg-hover hover:scale-110 duration-300`}>
+        <div class={tw`flex px-10 py-4 mx-96 rounded-lg justify-center hover:shadow-2xl hover:bg-hover hover:scale-110 duration-300  `}>
           
           <div class={tw` flex`}>
               <div>
@@ -34,7 +36,7 @@ export default function Project(props: projectProps) {
                     height="500"
                     width="500"
                     alt={props.imageAlt}
-                    class={tw`h-96`}
+                    class={tw`h-96 rounded-lg`}
                 />
               </div>
             <div class={tw` mx-14`}>

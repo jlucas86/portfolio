@@ -12,7 +12,7 @@ import { tw } from "twind";
 
 export default function About() {
     return (
-        <div class={tw`bg-primary text-white pt-14 px-10`}>
+        <div class={tw`bg-primary text-white pt-14 px-10 h-screen`}>
             <h1 class={tw`text-3xl py-4`}>Joshua Lucas</h1>
             <p class={tw`text-xl pb-4`}> 
                 I am a software deveoper with a B.S in computer science from UMBC. My goals as a software developer are to produce
