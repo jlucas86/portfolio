@@ -34,7 +34,7 @@ export default function Project(props: projectProps) {
                     height="500"
                     width="500"
                     alt={props.imageAlt}
-                    class={tw`h-80`}
+                    class={tw`h-96`}
                 />
               </div>
             <div class={tw` mx-14`}>

@@ -1,5 +1,5 @@
 import { IS_BROWSER } from "$fresh/runtime.ts";
-import { Configuration, setup } from "twind";
+import { Configuration, setup, layer, } from "twind";
 export * from "twind";
 export const config: Configuration = {
   darkMode: "class",
@@ -19,4 +19,6 @@ export const config: Configuration = {
     }
   },
 };
+
+
 if (IS_BROWSER) setup(config);
