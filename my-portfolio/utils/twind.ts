@@ -16,7 +16,8 @@ export const config: Configuration = {
         'secondary': "#656565",
         'hover':"#989898",
         'textP':"#dfd8e8",
-        'textS':"#69369e",
+        'textTitle':"#69369e",
+        'textSubTitle':"#69369e",
         'button':"#7951a8",
       },
       display: (theme) => ({

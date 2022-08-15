@@ -25,8 +25,8 @@ import { tw } from "twind";
 export default function Contact({contactRef}) {
 
     return (
-        <div class={tw`bg-gray-600 px-10 h-screen`}>
-          <div class={tw`text-5xl `}>Contact Me:</div>
+        <div class={tw`bg-gray-600 px-10 py-14 h-screen`}>
+          <div class={tw`text-5xl text-textTitle underline`}>Contact Me:</div>
           <div class={tw`flex content-center justify-center`}>
               <input 
                 type="image" 

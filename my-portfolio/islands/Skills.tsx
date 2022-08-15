@@ -24,8 +24,8 @@ export default function Skills(props: skillProps) {
 
   return (
         <div class={tw` bg-gray-600 p-[5vw] h-screen`}>
-          <div class={tw`text-5xl flex pb-10`}>
-            <div>skills:</div>
+          <div class={tw`text-5xl text-textTitle flex pb-10`}>
+            <div>Skills:</div>
             <div>{name}</div>
           </div>
           

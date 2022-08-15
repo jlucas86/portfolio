@@ -42,7 +42,7 @@ export default function Home() {
   let foodMap: [string, string, string, string, string, string, string, string] = ["Food Map", "tools", "hardware", "goal",
     "solution", "github", "https://picsum.photos/500/500","random image"]
 
-  let projects: Array<[string, string, string, string, string, string, string, string]> = [foodMap, foodMap, foodMap, foodMap, foodMap, foodMap, foodMap, foodMap, foodMap, foodMap, foodMap, foodMap, foodMap]
+  let projects: Array<[string, string, string, string, string, string, string, string]> = [foodMap, foodMap, foodMap, ]
 
   let skillList: Array<[string, string]> = [html5, css3, tailwind, javaScript, typeScript, react, fresh, bootstrap, nodejs, deno, c, cpp, java, spring, 
     python, jupyterNoteBook, django, mysql, postgresql, linux, git, virtualBox, docker, bash];
@@ -69,7 +69,8 @@ export default function Home() {
         <About ref={aboutRef}/>
         
         <Skills skills={skillList} ref={skillsRef} />
-        <div ref={projectsRef} class={tw`bg-secondary h-screen overflow-y-scroll py-10`} style={""}>
+        <div ref={projectsRef} class={tw`bg-secondary   px-96`} style={""}>
+          <h1 class={tw`text-textTitle text-3xl font-bold underline pt-14 pb-6`}>Projects:</h1>
           {projects.map(project => (
                 <Project 
                   title={project[0]}
@@ -82,7 +83,9 @@ export default function Home() {
                   imageAlt={project[7]}
                 />
               ))}
-          </div>
+            <h1 class={tw`text-textTitle text-3xl font-bold underline pt-10 pb-10`}>Other Projects:</h1>
+            
+        </div>
         <Contact id="contact" contactRef={contactRef} ref={contactRef} />
         
         
