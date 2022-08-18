@@ -20,6 +20,9 @@ export default function About() {
     const [posY, setPosY] = useState(postionY);
     const [posYB, setPosYB] = useState(postionYB);
 
+    const [sw, setSw] = useState(window.innerWidth);
+    const [viewBoxD, setViewBoxD] = useState("0 0 ".concat(window.innerWidth+" 100"));
+
     useEffect(()=> {    
         setTimeout(() => {      
             if(posX >= 100){
@@ -58,7 +61,7 @@ export default function About() {
                     As well as personal projects, with the goal of providing daily utiltiy to grow a large use base. 
                 </p>
             </div>
-            <svg viewBox="0 0 200 100" >
+            <svg viewBox={viewBoxD} >
 
                 <circle cx={posX} cy={posYB[0]} r="2.5" stroke="black" stroke-width="0" fill="white" />
                 <circle cx={posX+10} cy={posYB[1]} r="2.5" stroke="black" stroke-width="0" fill="white" />
