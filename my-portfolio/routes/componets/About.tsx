@@ -15,6 +15,7 @@ export default function About() {
 
     let postionY: [number, number, number, number, number, number, number, number, number, number] = [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
     let postionYB: [number, number, number, number, number, number, number, number, number, number] = [90, 90, 90, 90, 90, 90, 90, 90, 90, 90]
+    let radious : number = 10
 
     const [posX, setPosX] = useState(10);
     const [posY, setPosY] = useState(postionY);
@@ -25,32 +26,26 @@ export default function About() {
 
     useEffect(()=> {    
         setTimeout(() => {      
-            if(posX >= 100){
+            if(posX+(10*5) >= sw){
                 setPosX(10)
             }else{
                 setPosX(posX+.2)
                 setPosY(posY)
                 setPosYB(posYB)
             } 
-         }, 5);
+         }, .1);
     },[posX])
 
     
 
     return (
         <div class={tw`bg-primary text-white pt-14 px(10 lg:64 xl:80 2xl:96) h-screen flex flex-col items-center justify-center`}>
-            <svg viewBox="0 0 200 100" >
+            <svg viewBox={viewBoxD} >
+                {posY.map((posY, index) => (
+                    <circle cx={posX+(radious*2)*index} cy={posY} r={radious} stroke="black" stroke-width="0" fill="white" />
+                ))}
 
-                <circle cx={posX} cy={posY[0]} r="2.5" stroke="black" stroke-width="0" fill="white" />
-                <circle cx={posX+10} cy={posY[1]} r="2.5" stroke="black" stroke-width="0" fill="white" />
-                <circle cx={posX+20} cy={posY[2]} r="2.5" stroke="black" stroke-width="0" fill="white" />
-                <circle cx={posX+30} cy={posY[3]} r="2.5" stroke="black" stroke-width="0" fill="white" />
-                <circle cx={posX+40} cy={posY[4]} r="2.5" stroke="black" stroke-width="0" fill="white" />
-                <circle cx={posX+50} cy={posY[5]} r="2.5" stroke="black" stroke-width="0" fill="white" />
-                <circle cx={posX+60} cy={posY[6]} r="2.5" stroke="black" stroke-width="0" fill="white" />
-                <circle cx={posX+70} cy={posY[7]} r="2.5" stroke="black" stroke-width="0" fill="white" />
-                <circle cx={posX+80} cy={posY[8]} r="2.5" stroke="black" stroke-width="0" fill="white" />
-                <circle cx={posX+90} cy={posY[9]} r="2.5" stroke="black" stroke-width="0" fill="white" />
+                
             </svg>
             <div class={tw``}>
                 <h1 class={tw`text-3xl py-4`}>Hello, my name is <span class={tw`text-textTitle`}>Joshua Lucas</span>.</h1>
@@ -63,16 +58,9 @@ export default function About() {
             </div>
             <svg viewBox={viewBoxD} >
 
-                <circle cx={posX} cy={posYB[0]} r="2.5" stroke="black" stroke-width="0" fill="white" />
-                <circle cx={posX+10} cy={posYB[1]} r="2.5" stroke="black" stroke-width="0" fill="white" />
-                <circle cx={posX+20} cy={posYB[2]} r="2.5" stroke="black" stroke-width="0" fill="white" />
-                <circle cx={posX+30} cy={posYB[3]} r="2.5" stroke="black" stroke-width="0" fill="white" />
-                <circle cx={posX+40} cy={posYB[4]} r="2.5" stroke="black" stroke-width="0" fill="white" />
-                <circle cx={posX+50} cy={posYB[5]} r="2.5" stroke="black" stroke-width="0" fill="white" />
-                <circle cx={posX+60} cy={posYB[6]} r="2.5" stroke="black" stroke-width="0" fill="white" />
-                <circle cx={posX+70} cy={posYB[7]} r="2.5" stroke="black" stroke-width="0" fill="white" />
-                <circle cx={posX+80} cy={posYB[8]} r="2.5" stroke="black" stroke-width="0" fill="white" />
-                <circle cx={posX+90} cy={posYB[9]} r="2.5" stroke="black" stroke-width="0" fill="white" />
+                {posYB.map((posYB, index) => (
+                        <circle cx={posX+(radious*2)*index} cy={posYB} r={radious} stroke="black" stroke-width="0" fill="white" />
+                    ))}
             </svg>
         </div>
       );
