@@ -13,11 +13,18 @@ import { useState, useEffect, useRef} from "preact/hooks";
 
 export default function About() {
 
-    let postionY: [number, number, number, number, number, number, number, number, number, number] = [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
-    let postionYB: [number, number, number, number, number, number, number, number, number, number] = [90, 90, 90, 90, 90, 90, 90, 90, 90, 90]
-    let radious : number = 10
+    let radious : number = 40
+    let YB: number = 100-radious
+    let postionY: [number, number, number, number, number, number, number, number, number, number] = [40, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+    let postionYB: [number, number, number, number, number, number, number, number, number, number] = [100-40, 90, 90, 90, 90, 90, 90, 90, 90, 90]
 
-    const [posX, setPosX] = useState(10);
+    for(let i =0; i< postionY.length; ++i){
+        postionY[i] = radious
+        postionYB[i] = YB
+    }
+    
+
+    const [posX, setPosX] = useState(40);
     const [posY, setPosY] = useState(postionY);
     const [posYB, setPosYB] = useState(postionYB);
 
