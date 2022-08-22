@@ -6,6 +6,7 @@ import About from "../routes/componets/About.tsx";
 import Skills from "./Skills.tsx";
 import Contact from "./Contact.tsx";
 import NavBar from "./NavBar.tsx";
+import Buttons from "../routes/componets/Buttons.tsx";
 import { useState, useEffect, useRef} from "preact/hooks";
 
 /**
@@ -63,6 +64,7 @@ export default function Home() {
   return (
     <div class={tw`font-mono `} onscroll="console.log('butts')" >
       <NavBar aboutRef={aboutRef} skillsRef={skillsRef} projectsRef={projectsRef} contactRef={contactRef}/>
+      <Buttons/>
     
       <div class={tw`mx-auto max-w-screen-2xlg`}>
         
@@ -87,6 +89,7 @@ export default function Home() {
             
         </div>
         <Contact id="contact" contactRef={contactRef} ref={contactRef} />
+        
         
         
       </div>

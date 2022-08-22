@@ -8,6 +8,7 @@ import Skills from "../islands/Skills.tsx";
 import Contact from "../islands/Contact.tsx";
 import NavBar from "../islands/NavBar.tsx";
 import Index2 from "../islands/index2.tsx";
+import Buttons from "./componets/Buttons.tsx";
 import { useState, useEffect, useRef} from "preact/hooks";
 
 /**

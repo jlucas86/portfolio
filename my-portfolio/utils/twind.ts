@@ -18,7 +18,7 @@ export const config: Configuration = {
         'textP':"#dfd8e8",
         'textTitle':"#69369e",
         'textSubTitle':"#69369e",
-        'button':"#7951a8",
+        'button':"#a78afb",
       },
       display: (theme) => ({
         // Use a own gradient
