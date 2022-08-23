@@ -2,6 +2,7 @@
 import { h } from "preact";
 import { tw } from "twind";
 import Project from "../routes/componets/Project.tsx";
+import OtherProject from "../routes/componets/OtherProject.tsx";
 import About from "../routes/componets/About.tsx";
 import Skills from "./Skills.tsx";
 import Contact from "./Contact.tsx";
@@ -43,7 +44,12 @@ export default function Home() {
   let foodMap: [string, string, string, string, string, string, string, string] = ["Food Map", "tools", "hardware", "goal",
     "solution", "github", "https://picsum.photos/500/500","random image"]
 
+    let foodMap1: [string, string, string, string, string, string] = ["Food Map", "tools", "hardware", "goal",
+    "solution", "github"]
+
   let projects: Array<[string, string, string, string, string, string, string, string]> = [foodMap, foodMap, foodMap, ]
+
+  let otherProjects: Array<[string, string, string, string, string, string]> = [foodMap1, foodMap1, foodMap1, foodMap1, foodMap1]
 
   let skillList: Array<[string, string]> = [html5, css3, tailwind, javaScript, typeScript, react, fresh, bootstrap, nodejs, deno, c, cpp, java, spring, 
     python, jupyterNoteBook, django, mysql, postgresql, linux, git, virtualBox, docker, bash];
@@ -86,8 +92,21 @@ export default function Home() {
                 />
               ))}
             <h1 class={tw`text-textTitle text-3xl font-bold underline pt-10 pb-10`}>Other Projects:</h1>
-            
-        </div>
+              <div class={tw`grid grid-cols-3 gap-4`}>
+                {otherProjects.map(project => (
+                        <OtherProject 
+                          title={project[0]}
+                          tools={project[1]}
+                          hardware={project[2]}
+                          goal={project[3]}
+                          solution={project[4]}
+                          github={project[5]}
+                          image={project[6]}
+                          imageAlt={project[7]}
+                        />
+                      ))}
+              </div>
+        </div >
         <Contact id="contact" contactRef={contactRef} ref={contactRef} />
         
         

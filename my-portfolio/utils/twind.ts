@@ -16,7 +16,7 @@ export const config: Configuration = {
         'secondary': "#656565",
         'hover':"#989898",
         'textP':"#dfd8e8",
-        'textTitle':"#69369e",
+        'textTitle':"#a78afb",
         'textSubTitle':"#69369e",
         'button':"#a78afb",
       },
