@@ -17,7 +17,7 @@ export default function OtherProject(props: projectProps) {
 
 
     return (
-        <div class={tw`flex px-2 py-4 w-96  rounded-lg justify-center hover:shadow-2xl hover:bg-hover hover:scale-110 duration-300  `}>
+        <div class={tw`flex px-2 py-4 w-80 border-2 border-white hover:border-0 rounded-lg  hover:shadow-2xl hover:bg-hover hover:scale-110 duration-300  `}>
           
           <div class={tw``}>
               

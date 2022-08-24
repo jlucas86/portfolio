@@ -92,7 +92,7 @@ export default function Home() {
                 />
               ))}
             <h1 class={tw`text-textTitle text-3xl font-bold underline pt-10 pb-10`}>Other Projects:</h1>
-              <div class={tw`grid grid-cols-3 gap-4`}>
+              <div class={tw`grid grid-cols-3 gap-10`}>
                 {otherProjects.map(project => (
                         <OtherProject 
                           title={project[0]}
