@@ -101,16 +101,11 @@ export default function Home() {
                           goal={project[3]}
                           solution={project[4]}
                           github={project[5]}
-                          image={project[6]}
-                          imageAlt={project[7]}
                         />
                       ))}
               </div>
         </div >
         <Contact id="contact" contactRef={contactRef} ref={contactRef} />
-        
-        
-        
       </div>
     </div>
   );

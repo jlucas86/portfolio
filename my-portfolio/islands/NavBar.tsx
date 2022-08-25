@@ -14,14 +14,14 @@ import { useState, useEffect, useReducer} from "preact/hooks";
  */
 export default function NavBar({aboutRef, skillsRef, projectsRef, contactRef}) {
 
-    const [display, setDisplay] = useState(tw` fixed flow-root bg-purple-400 h-14 w-screen pt-4`);
+    const [display, setDisplay] = useState(tw` fixed flow-root bg-purple-400 h-14 w-screen pt-4 align-middle`);
 
     const navBarControl = (() =>{
         
         if(window.scrollY === 0){
-            setDisplay(tw` fixed flow-root bg-purple-400 h-14 w-screen duration-1000  `)
+            setDisplay(tw` fixed flow-root bg-purple-400 h-14 w-screen duration-1000 pt-4 align-middle `)
         }else{
-            setDisplay(tw` fixed flow-root bg-purple-400 h-14 w-screen bg-opacity(10 hover:100) transition  hover:transition   duration(300 hover:300)`)
+            setDisplay(tw` fixed flow-root bg-purple-400 h-14 w-screen bg-opacity(10 hover:100) transition  hover:transition   duration(300 hover:300) pt-4 align-middle`)
         } 
            
     })
@@ -52,14 +52,14 @@ export default function NavBar({aboutRef, skillsRef, projectsRef, contactRef}) {
 
     return (
             <div class={display}>
-                <div class={tw`float-left mx-20`}>Joshua Lucas</div>
-                <div class={tw` flex float-right mx-20`}>
+                <div class={tw`float-left mx-20 text-3xl font-bold text-white`}>Joshua Lucas</div>
+                <div class={tw` flex float-right mx-20 text-lg`}>
                     <div class={tw`px-1 cursor-pointer hover:border-b-2`} onClick={() =>handleScroll(aboutRef)}> About </div>
                     <div class={tw`px-1 cursor-pointer hover:border-b-2`} onClick={() =>handleScroll(skillsRef)}> Skills </div>
                     <div class={tw`px-1 cursor-pointer hover:border-b-2`} onClick={() =>handleProjectsScroll(projectsRef)}> Projects </div>
                     <div class={tw`px-1 cursor-pointer hover:border-b-2`} onClick={() =>handleScroll(contactRef)}> Contact </div>
-                    <div class={tw`px-1 cursor-pointer hover:border-2 rounded-md`} onClick="window.open('/generalResume.pdf')">resume </div>
-                    <div class={tw`px-1 cursor-pointer hover:border-2 rounded-md`} onClick="window.open('https://github.com/jlucas86')">github </div>
+                    <div class={tw`px-1 cursor-pointer hover:border-b-2 rounded-md hover:bg-purple-300`} onClick="window.open('/generalResume.pdf')">Resume </div>
+                    <div class={tw`px-1 cursor-pointer hover:border-b-2 rounded-md hover:bg-purple-300`} onClick="window.open('https://github.com/jlucas86')">Github </div>
                 </div>
             </div>
       );
