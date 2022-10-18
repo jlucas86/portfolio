@@ -77,7 +77,7 @@ export default function Home() {
   let NBodysSimulation: [string, string, string, string, string, string] = ["N-Body Simulation", "tools", "hardware", "goal",
     "solution", "github"]
 
-  let pokemon: [string, string, string, string, string, string] = ["pokemon", "tools", "hardware", "goal",
+  let pokemon: [string, string, string, string, string, string] = ["Pokemon", "tools", "hardware", "goal",
     "solution", "github"]
 
   let foodMap1: [string, string, string, string, string, string] = ["Food Map", "tools", "hardware", "goal",

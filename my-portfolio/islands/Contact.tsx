@@ -25,7 +25,7 @@ import { tw } from "twind";
 export default function Contact({contactRef}) {
 
     return (
-        <div class={tw`bg-gray-600 px-10 py-14 h-screen h-screen flex flex-col items-center justify-center`}>
+        <div class={tw`bg-gray-600 px-10 py-14 h-98  flex flex-col items-center justify-center`}>
           <div class={tw`text-5xl text-textTitle underline`}>Contact Me:</div>
           <div>
           <form action="https://formsubmit.co/sk8jjcl@gmail.com" method="POST"  class={tw` flex flex-col items-center justify-center`}>

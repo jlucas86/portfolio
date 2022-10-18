@@ -21,7 +21,7 @@ export default function OtherProject(props: projectProps) {
           
           <div class={tw``}>
               
-            <div class={tw` mx-14`}>
+            <div class={tw` mx-6`}>
                 <div  class={tw`text-3xl text-textSubTitle`}>{props.title}</div>
                     <div class={tw` flex text-textP `}>
                         <div class={tw`font-bold`}>Tools:</div>
