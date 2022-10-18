@@ -59,8 +59,11 @@ export default function About() {
                 <p class={tw`text-xl pb-4`}> 
                     I am a software deveoper, currently focusing on full stack development. 
                     I graduated from University of Maryland, Baltimore County (UMBC), with B.S. in computer science.
-                    Since graduating, I have worked on few freelace projects of varying types.
-                    As well as personal projects, with the goal of providing daily utiltiy to grow a large use base. 
+                    Since graduating, I have worked on freelace projects of varying types, including web scrapers, home automation, 
+                    and In-system programming.
+                    As well as projects with a personal goal in mind.
+                    Some of the projects include a restaurant based social media platform, a recipe recommendation app, 
+                    and multiple scientific simulations.
                 </p>
             </div>
             <svg viewBox={viewBoxD} >

@@ -26,7 +26,7 @@ export default function Project(props: projectProps) {
 
 
     return (
-        <div class={tw`flex px-10 py-10  rounded-lg justify-center hover:shadow-2xl hover:bg-hover hover:scale-110 duration-300  `}>
+        <div class={tw`gird grid-cols-3 gap-3 px-10 py-10  rounded-lg justify-center hover:shadow-2xl hover:bg-hover hover:scale-110 duration-300  `}>
           
           <div class={tw` flex`}>
               <div>
@@ -39,7 +39,7 @@ export default function Project(props: projectProps) {
                     class={tw`h-96 rounded-lg`}
                 />
               </div>
-            <div class={tw` mx-14`}>
+            <div class={tw` mx-14 col-span-2`}>
                 <div  class={tw`text-5xl text-textSubTitle`}>{props.title}</div>
                     <div class={tw` flex text-textP `}>
                         <div class={tw`font-bold`}>Tools:</div>

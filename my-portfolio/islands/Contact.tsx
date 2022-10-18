@@ -30,14 +30,14 @@ export default function Contact({contactRef}) {
           <div>
           <form action="https://formsubmit.co/sk8jjcl@gmail.com" method="POST"  class={tw` flex flex-col items-center justify-center`}>
 
-            <div class={tw` flex my-4`}>
-              <input type="text" name="name" class={tw` rounded-lg mx-0.5 p-2 w-48`}  placeholder="Full Name" required></input>
-              <input type="email" name="email" class={tw` rounded-lg mx-0.5  p-2 w-48`} placeholder="Email Address" required></input>
+            <div class={tw`flex flex-col mt-4`}>
+              <input type="text" name="name" class={tw` rounded-lg mx-1 mt-2 p-2 w-96`}  placeholder="Full Name" required></input>
+              <input type="email" name="email" class={tw` rounded-lg mx-1 mt-2  p-2 w-96`} placeholder="Email Address" required></input>
             </div>
             <input type="hidden" name="_subject" value="New submission!"></input>
               
               
-              <textarea placeholder="Your Message" class={tw` rounded-lg mx-1 w-96 p-2 `} name="message" rows="10" required></textarea>
+              <textarea placeholder="Your Message" class={tw` rounded-lg mx-1 mt-2  w-96 p-2 `} name="message" rows="10" required></textarea>
               <button type="submit" class={tw`w-20 p-2 m-2 bg-button rounded-lg text-textP font-bold  border-1 border-button hover:border-white`}>Send</button>
 
           </form> 

@@ -41,15 +41,55 @@ export default function Home() {
   let linux: [string, string] = ["Linux","/img/linux.png"];
   let tailwind: [string, string] = ["Tailwind","/img/tailwind.png"];
 
+  
+  // porject for fun/portfolio that are note worthy
   let foodMap: [string, string, string, string, string, string, string, string] = ["Food Map", "tools", "hardware", "goal",
     "solution", "github", "https://picsum.photos/500/500","random image"]
 
-    let foodMap1: [string, string, string, string, string, string] = ["Food Map", "tools", "hardware", "goal",
+  let mehflix: [string, string, string, string, string, string, string, string] = ["Mehflix", "tools", "hardware", "goal",
+    "solution", "github", "https://picsum.photos/500/500","random image"]
+  
+  let foodRecomender: [string, string, string, string, string, string, string, string] = ["Food Recomender", "tools", "hardware", "goal",
+    "solution", "github", "https://picsum.photos/500/500","random image"]
+
+    
+
+  // Freelance projects
+  let raidCounter: [string, string, string, string, string, string, string, string] = ["Raid Counter", "tools", "hardware", "goal",
+    "solution", "github", "https://picsum.photos/500/500","random image"]
+
+  let lightingSystem: [string, string, string, string, string, string, string, string] = ["Lightning System", "tools", "hardware", "goal",
+    "solution", "github", "https://picsum.photos/500/500","random image"]
+
+  // other projects that are less note worthy but still note worthy
+  let morseCodeTranslator: [string, string, string, string, string, string] = ["Morse Code Translator", "tools", "hardware", "goal",
     "solution", "github"]
 
-  let projects: Array<[string, string, string, string, string, string, string, string]> = [foodMap, foodMap, foodMap, ]
+  let chatService: [string, string, string, string, string, string] = ["Chat Service", "tools", "hardware", "goal",
+    "solution", "github"]
 
-  let otherProjects: Array<[string, string, string, string, string, string]> = [foodMap1, foodMap1, foodMap1, foodMap1, foodMap1]
+  let connect4AI: [string, string, string, string, string, string] = ["Connect 4 AI", "tools", "hardware", "goal",
+    "solution", "github"]
+
+  let RFIDDoorLock: [string, string, string, string, string, string] = ["RFID Door Lock", "tools", "hardware", "goal",
+    "solution", "github"]
+
+  let NBodysSimulation: [string, string, string, string, string, string] = ["N-Body Simulation", "tools", "hardware", "goal",
+    "solution", "github"]
+
+  let pokemon: [string, string, string, string, string, string] = ["pokemon", "tools", "hardware", "goal",
+    "solution", "github"]
+
+  let foodMap1: [string, string, string, string, string, string] = ["Food Map", "tools", "hardware", "goal",
+    "solution", "github"]
+
+  // arrays for each project type
+
+  let FreelanceProjects: Array<[string, string, string, string, string, string, string, string]> = [raidCounter, lightingSystem, ]
+
+  let projects: Array<[string, string, string, string, string, string, string, string]> = [foodMap, mehflix, foodRecomender, ]
+
+  let otherProjects: Array<[string, string, string, string, string, string]> = [morseCodeTranslator, chatService, connect4AI, RFIDDoorLock, NBodysSimulation, pokemon]
 
   let skillList: Array<[string, string]> = [html5, css3, tailwind, javaScript, typeScript, react, fresh, bootstrap, nodejs, deno, c, cpp, java, spring, 
     python, jupyterNoteBook, django, mysql, postgresql, linux, git, virtualBox, docker, bash];
@@ -77,7 +117,22 @@ export default function Home() {
         <About ref={aboutRef}/>
         
         <Skills skills={skillList} ref={skillsRef} />
-        <div ref={projectsRef} class={tw`bg-secondary   px-96`} style={""}>
+        <div ref={projectsRef} class={tw`bg-secondary   px-96 pb-10`} style={""}>
+          <h1 class={tw`text-textTitle text-3xl font-bold underline pt-14 pb-6`}>Freelance Projects:</h1>
+          {FreelanceProjects.map(project => (
+                <Project 
+                  title={project[0]}
+                  tools={project[1]}
+                  hardware={project[2]}
+                  goal={project[3]}
+                  solution={project[4]}
+                  github={project[5]}
+                  image={project[6]}
+                  imageAlt={project[7]}
+                />
+              ))}
+        </div >
+        <div  class={tw`bg-gray-600 px-96 pb-10`} style={""}>
           <h1 class={tw`text-textTitle text-3xl font-bold underline pt-14 pb-6`}>Projects:</h1>
           {projects.map(project => (
                 <Project 
@@ -91,6 +146,8 @@ export default function Home() {
                   imageAlt={project[7]}
                 />
               ))}
+          </div>
+          <div  class={tw`bg-secondary px-96 pb-10`} style={""}>
             <h1 class={tw`text-textTitle text-3xl font-bold underline pt-10 pb-10`}>Other Projects:</h1>
               <div class={tw`grid grid-cols-3 gap-10`}>
                 {otherProjects.map(project => (

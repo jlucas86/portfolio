@@ -14,14 +14,14 @@ import { useState, useEffect, useReducer} from "preact/hooks";
  */
 export default function NavBar({aboutRef, skillsRef, projectsRef, contactRef}) {
 
-    const [display, setDisplay] = useState(tw` fixed flow-root bg-purple-400 h-14 w-screen pt-4 align-middle`);
+    const [display, setDisplay] = useState(tw` fixed flow-root bg-purple-400 h-14 z-10 w-screen pt-4 align-middle`);
 
     const navBarControl = (() =>{
         
         if(window.scrollY === 0){
-            setDisplay(tw` fixed flow-root bg-purple-400 h-14 w-screen duration-1000 pt-4 align-middle `)
+            setDisplay(tw` fixed flow-root bg-purple-400 h-14 z-10 w-screen duration-1000 pt-4 align-middle  `)
         }else{
-            setDisplay(tw` fixed flow-root bg-purple-400 h-14 w-screen bg-opacity(10 hover:100) transition  hover:transition   duration(300 hover:300) pt-4 align-middle`)
+            setDisplay(tw` fixed flow-root bg-purple-400 h-14 z-10 w-screen bg-opacity(10 hover:100) transition  hover:transition duration(300 hover:300) pt-4 align-middle`)
         } 
            
     })
